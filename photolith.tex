@@ -10,7 +10,7 @@ Weaken the non-exposed resist
 \item clean mask (upper side: silver, bottom side: chrome)
 \end{itemize}
 
-\subsubsection{Steps}
+\subsubsection{Steps - Quintel Q6000}
 \begin{enumerate}
 \item At the bottom left part, check that the device is in:
 \begin{itemize}[nolistsep, noitemsep]
@@ -63,11 +63,114 @@ Device is powered up when levels on left/bottom gauges have moved from zero.
 \item Watts
 \end{itemize}
 \end{enumerate}
+Note: If the 'separate' light does not illuminate, move the microscope back and forward (hit the mask \boxed{load} button twice).
+\newpage
+\subsubsection{Steps - Karl Suss MA6}
+\begin{enumerate}
+\item Check the three missile switches on the back of the mask aligner are in the \boxed{ON} position.
+\item Start the flow of compressed air to the machine.
+\item Start the lamp. On the lamp controller:
+\begin{enumerate}
+  \item Press the \boxed{ON} button. Wait until the screen shows "READY".
+  \item Press the \boxed{CP} button. Wait until the screen shows "IGNITION".
+  \item Press the \boxed{Start} button.
+  \item The screen will show "Lamp Cold" and an error light will flash for ~3 minutes.
+  \item After the lamp is warm, power should read \SI{299}{W}.
+\end{enumerate}
+\item Toggle the missile switch on the front of the mask aligner to turn it on. Press the \boxed{Load}
+      button to start.
+\item Turn off the \boxed{BSA Microscope} feature on the mask aligner.
+\item Load the mask:
+\begin{enumerate}
+  \item Check that the mask plate is the correct size. We use the 4 inch wafer plate.
+  \item Press the \boxed{Change Mask} button.
+  \item Place the mask on the mask plate, chrome side facing upwards. Press the \boxed{Enter} button to clamp the mask.
+  \item Check the mask is secure. Slot the mask plate into the aligner.
+  \item Press the \boxed{Change Mask} button to secure the plate and complete the procedure. \textbf{Warning: Do not press
+        \boxed{Enter} once the plate is in the aligner, as the mask will drop.}
+\end{enumerate}
+\item Set up the exposure:
+\begin{itemize} [noitemsep, nolistsep]
+  \item \textbf{To start a new program}
+  \begin{enumerate} [noitemsep, nolistsep]
+    \item Push \boxed{Select Program}.
+    \item Use the \boxed{\uparrow} and \boxed{\downarrow} keys to select a contact mode. We generally use \textbf{Hard} contact mode.
+    \item Push \boxed{Select Program} and move on to the edit parameters step.
+  \end{enumerate}
+  \item \textbf{To load a previously stored program}
+  \begin{enumerate} [noitemsep, nolistsep]
+    \item Push \boxed{Edit Program} to move into the select program mode.
+    \item Using the \boxed{\leftarrow} and \boxed{\rightarrow} keys, select the "Load Program [x]" option.
+    \item Using the \boxed{\uparrow} and \boxed{\downarrow} keys, select the correct program number.
+    \item Push \boxed{Edit Program} to load the program.
+  \end{enumerate}
+  \item \textbf{To edit parameters}
+  \begin{enumerate} [noitemsep, nolistsep]
+    \item Push \boxed{Edit Parameter} to move into the select parameters mode.
+    \item Using the \boxed{\leftarrow} and \boxed{\rightarrow} keys, select the parameter you wish to change.
+    \item Using the \boxed{\uparrow} and \boxed{\downarrow} keys, change the parameter. The following parameters
+          have worked well.
+    \begin{itemize} [noitemsep, nolistsep]
+      \item Exposure Time: \SI{1.7}{\second}
+      \item Alignment Gap: \SI{60}{\micro\meter}
+      \item HC Wait Time: \SI{10}{\second}
+      \item Contact Mode: Hard
+    \end{itemize}
+    \item Once finished, press \boxed{Edit Parameter} to exit the parameter selection mode.
+  \end{enumerate}
+  \item \textbf{To save the program}
+  \begin{enumerate} [noitemsep, nolistsep]
+    \item Push \boxed{Edit Program}
+    \item Using the \boxed{\leftarrow} and \boxed{\rightarrow} keys, select the "Save Program [x]" option.
+    \item Using the \boxed{\uparrow} and \boxed{\downarrow} keys, select the correct program number.
+    \item Push \boxed{Edit Program} to save the program.
+  \end{enumerate}
+\end{itemize}
+\item Load the chip:
+\begin{enumerate} [noitemsep, nolistsep]
+  \item Check that the wafer stage is the correct one for your wafer. We use the 2 inch wafer stage. Ensure that
+        the outer two vacuum mounts are off.
+  \item Press \boxed{Load} to start the chip load procedure.
+  \item Pull the wafer plate from the mask aligner. Place the chip onto the stage. If the chip is less than
+        $6 \times 6 \si{\milli\meter}$, cut a square of blue dicing tape and place the chip onto the tape before loading it.
+  \item Push the wafer stage back into the aligner, and press \boxed{Enter}. The wafer stage will come into contact with the mask.
+        Wait until the screen shows "Align substrates".
+\end{enumerate}
+\item Align the substrate:
+\begin{enumerate} [noitemsep, nolistsep]
+  \item The microscope in use can be changed using the switch under the eyepiece. Focus is adjusted using either the coarse knob at the back of the scope 
+        assembly or the fine knob at the front of the scope.
+  \item Align the substrate using the two large micrometers on either side of the mask aligner (Left Y, Right X), and the small micrometer at the front right ($\theta$).
+  \item The alignment gap can be changed in small steps using the \boxed{\uparrow Sep} and \boxed{\downarrow Sep} buttons.
+  \item Once aligned, press \boxed{Alignment Check} to ensure the chip doesn't shift when it comes into contact with the mask. Press again to move back out of alignment and adjust.
+\end{enumerate}
+\item Once you are happy, press \boxed{Exposure}. Once complete, pull out the wafer stage and unload the chip.
+\item Repeat from the Load Chip section for all chips you wish to expose.
+\item To unload the mask:
+\begin{enumerate} [noitemsep, nolistsep]
+  \item Press the \boxed{Load Mask} button.
+  \item Pull out the mask plate.
+  \item Press \boxed{Enter} to remove the mask vacuum and remove the mask.
+\end{enumerate}
+\item To turn off the mask aligner:
+\begin{enumerate} [noitemsep, nolistsep]
+  \item Toggle the mask aligner switch to Off
+  \item Press the \boxed{OFF} button on the lamp power supply.
+  \item Wait 10 minutes for the lamp to cool.
+  \item Turn of the compressed air to the aligner.
+\end{enumerate}
+\end{enumerate}
+\textbf{Notes:}
+\begin{itemize} [noitemsep, nolistsep]
+  \item The lamp must be kept off for at least 30 minutes after it was last used. If another user wishes to use the aligner
+        or you wish to use the aligner in a short period of time, it is best to leave the lamp on.
+  \item To unload a chip after it has been loaded but without exposing it, press the \boxed{Unload} button.
+  \item The main mask aligner power does not need to be turned off after use.
+\end{itemize}
 \newpage
 \subsubsection{Misc}
 \begin{itemize}
 \item Exposed resist is removed (negative resist)
-\item If the 'separate' light does not illumiate, move the microscope back and forward (hit the mask \boxed{load} button twice).
 \item To clean the mask, spray IPA on both sides, gently wipe with clean room wipes. Blow dry with nitrogen.
 \item Turn the lamp on 5 mins before you need to align, it needs time to start up.
 \end{itemize}
