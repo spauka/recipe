@@ -1,0 +1,108 @@
+\section{Resist spinning}
+
+\subsubsection{Aim}
+Dispense a homogeneous layer of resist on the chip
+
+\subsubsection{Resist Stack}
+The resist stacks for various steps of processing are as follows:
+\begin{description}[noitemsep, nolistsep, leftmargin=\parindent, labelindent=\parindent]
+\item[Mesa Etch] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item AZ6612
+  \end{itemize}
+\item[Ohmics] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item AZ6612
+    \item LOR 5A
+  \end{itemize}
+\item[Fine Gates] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item PMMA A3
+  \end{itemize}
+\item[Optical Gates] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item AZ6612
+    \item LOR 5A
+  \end{itemize}
+\end{description}
+
+\subsubsection{Needs}
+\begin{itemize} [noitemsep]
+\item check everything is clean
+\item IPA
+\item pipette
+\item resist AZ6612, LOR 5A, PMMA A3
+\item timer
+\end{itemize}
+
+\subsubsection{Programming}
+\begin{enumerate}
+  \item Hit \boxed{recipe}, then recipe number (\boxed{1}).
+  \item If the recipe needs to be cleared (too many steps) hit \boxed{recipe}, \boxed{clear} and then the recipe number (\boxed{1}).
+  \item Hit \boxed{step}, then the step number (\boxed{1}).
+  \item Hit \boxed{speed}, then set up the rotation speed (500rpm for step 1). Hit \boxed{enter} when done.
+  \item Hit \boxed{speed}, then set up the ramp slope (500rpm/sec ramp for step 1). Hit \boxed{enter} when done.
+  \item Hit \boxed{terminate}, then set up the duration of the step (5.0 sec for step 1). Hit \boxed{enter} when done.
+  \item Hit \boxed{step}, choose the step number and repeat as many times as required.
+  \item To finish, hit \boxed{step}, then \boxed{0}.
+\end{enumerate}
+
+\subsubsection{Recipes}
+\begin{description}[nolistsep, noitemsep]
+\item {LOR 5A}
+  \begin{enumerate}
+  \item 500rpm for 5 sec, 500 rpm/sec ramp.
+  \item 10000rpm for 1 sec, 10000 rpm/sec ramp.
+  \item 2500rpm for 60 sec, 7500 rpm/sec ramp.
+  \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
+  \item Bake for 5 min at \SI{170}{\celsius}
+  \end{enumerate}
+\item {AZ6612}
+  \begin{enumerate}
+  \item 500 rpm for 5 sec, 500 rpm/sec ramp.
+  \item 10000 rpm for 20 sec, 4000 rpm/sec ramp.
+  \item 4000 rpm for 20 sec, 4000 rpm/sec ramp.
+  \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
+  \item Bake for 60 sec at \SI{95}{\celsius}
+  \end{enumerate}
+\item {PMMA A3}
+  \begin{enumerate}
+  \item 500 rpm for 5 sec, 500 rpm/sec ramp.
+  \item 9000 rpm for 5 sec, 4000 rpm/sec ramp.
+  \item 6000 rpm for 30 sec, 4000 rpm/sec ramp.
+  \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
+  \item Bake for 90 sec at \SI{180}{\celsius}
+  \end{enumerate}
+\end{description}
+
+\subsubsection{Steps}
+\begin{enumerate}
+\item Put the chip at the center of the chuck (ensure there is no wobbles).
+\item Check the recipe.
+\item Make sure other chips/tools are protected from projections.
+\item Take some droplets of resist with a pipette. Put the pipette with resist in its bag.
+\item Spin clean the chip:
+\begin{enumerate}
+\item Spin at 4000rpm.
+\item Spray 5 seconds of Acetone
+\item Spray 5 seconds with Acetone and IPA (don't let Acetone dry)
+\item Spray 5 seconds with IPA
+\item Blow dry while spinning
+\end{enumerate}
+\item Place 2-3 drops of resist with the pipette on the chip during the 500 rpm spin
+\item Always put the pipette back in its bag, wait for the spinning to stop
+\item Bake the chip
+\item Put the chip back in its box
+\item Clean the spinner (!no liquid in vacuum hole!): use wipes with acetone to clean the chuck, protections, bench.
+\end{enumerate}
+
+\subsubsection{Misc}
+\begin{itemize}
+\item Don't put liquid in the spinner vacuum hole when cleaning.
+\item Resist AZ6612, 12 means \SI{1.2}{\micro\meter}. (Measured depth closer to \SI{800}{\nano\meter})
+\item If you will be spinning LOR 5A turn on the hot plate before you start. It takes about 10 minutes to warm up.
+\item Note that the vacuum only turns on while the spinner is running. Don't spray before or after the spinner has stopped.
+\end{itemize}
+
+\newpage
+

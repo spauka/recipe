@@ -1,0 +1,157 @@
+\section{Metal deposition - Thermal Lesker}
+\subsubsection{Aim}
+Deposit metal on device to cover patterns not covered with resist.
+
+\subsubsection{Needs}
+\begin{itemize}[noitemsep]
+  \item materials and corresponding boats
+  \item chip holder
+  \item safe work procedure of the evaporator
+  \item round shaped wipes
+\end{itemize}
+
+\subsection{Prologue}
+\begin{enumerate}
+\item Take needed materials boxes (located in the "Evaporator Source Metals" drawer), and corresponding cutters.
+\item Prepare the necessary boats for each material. Always manipulate them on wipes on the evaporator.
+\item Take the sample holder and adjust holders such that they can firmly hold the chip
+\item Locate under microscope a scratched corner of the chip. Use this corner to clamp the chip under the chip holder.
+\item Alternatively, you can use a glass part and stick a chip to the glass using a droplet of PMMA. Place
+a drop of PMMA onto the slide and place the chip onto the droplet. Dry for 5 minutes under the fume hood (no need to bake)
+and clamp slide to chip holder. This avoids damaging the chip.
+\item Test that the chip is well clamped by gently shaking the sample holder.
+\end{enumerate}
+\newpage
+\subsection{Recipes}
+
+\subsubsection{Ohmics}
+\begin{itemize}
+\item $2 \times 3\text{---}4$ pieces of \SI{2.5}{\milli\meter} of Ni (very reactive)\\
+  (Note: Use two boats in case one fails)
+\item 3 pieces of \SI{2.5}{\milli\meter} of Ge (does not degaz, very sensitive)
+\item 8 pieces of \SI{2.5}{\milli\meter} of Au (does not degaz, slow heat transfer)
+\end{itemize}
+
+\textbf{Recipe: }
+\begin{enumerate}[label=\protect\nth{\value*} layer: ,noitemsep,leftmargin=10em]
+\item \SI{50}{\angstrom} of Ni at \SI{0.5}{\angstrom\per\second} 
+\item \SI{350}{\angstrom} of Ge at \SI{1}{\angstrom\per\second} 
+\item \SI{720}{\angstrom} of Au at \SI{2.5}{\angstrom\per\second} 
+\item \SI{180}{\angstrom} of Ni at \SI{1}{\angstrom\per\second} 
+\item \SI{500}{\angstrom} of Au at \SI{1.5}{\angstrom\per\second} 
+\end{enumerate}
+
+\subsubsection{Fine Gates}
+\begin{itemize}
+\item 4 pieces of \SI{2.5}{\milli\meter} of Ti
+\item 3 pieces of \SI{2.5}{\milli\meter} of Au
+\end{itemize}
+
+\textbf{Recipe: }
+\begin{enumerate}[label=\protect\nth{\value*} layer: ,noitemsep,leftmargin=10em]
+\item \SI{80}{\angstrom} of Ti at \SI{1}{\angstrom\per\second}
+\item \SI{120}{\angstrom} of Au at 3 to \SI{4}{\angstrom\per\second}
+\end{enumerate}
+
+
+\subsubsection{Contacts deposition}
+\begin{itemize}
+\item 4 pieces of \SI{2.5}{\milli\meter} of Ti
+\item 7 pieces of \SI{2.5}{\milli\meter} of Au
+\end{itemize}
+
+\textbf{Recipe: }
+\begin{enumerate}[label=\protect\nth{\value*} layer: ,noitemsep,leftmargin=10em]
+\item \SI{100}{\angstrom} of Ti at \SI{1}{\angstrom\per\second}
+\item \SI{1000}{\angstrom} of Au at 3 to \SI{4}{\angstrom\per\second}
+\end{enumerate}
+
+\newpage
+
+
+\subsection{Procedure}
+\begin{enumerate}
+\item Check that the pump is off
+\item Vent for 3 min
+\item Lift the bell with the remote and remove shield
+\item Place boat on poles using the tools. Boats should fit between the circular washers. Tighten gently, ensuring that
+boats do not twist.
+\item Place cut metals into the appropriate boats. Remember to double glove and clean tweezers between each metal
+to prevent cross-contamination.
+\item Using the lever on the right hand side, place the sample holder above the right boat.
+\item Check the oscillator capacity (press \boxed{xtal} on the infinicon monitor. will return to home screen after a few seconds). Replace if
+oscillator capacity is greater than 25\%.
+\item Insert the sample holder into holder. Ensure that the holder locks firmly into place.
+\item Place boat separators between each boat. Ensure they do not touch the evaporator poles.
+\item Before closing check:
+\begin{itemize}[nolistsep,noitemsep]
+  \item chip position
+  \item boat + material
+  \item oscillator
+  \item boat separators don't touch boats holders (short circuits)
+\end{itemize}
+\item Replace shield
+\item Clean the seal and contact area below bell with IPA
+\item Bring the bell down using the remote. Do not bring it below the indicator.
+\item Turn on the mechanical pump (big toggle switch)
+\item When the pressure $\leq$ \SI{0.2}{\milli\bar}, hit \boxed{start} to turn the turbo on\\
+\item \underline{when pressure $\leq$ 10$^{-2}$ mbar} (wait 10 minutes after turbo start), the pressure can be read by turning the filament on and then off as soon as the pressure is read.\\
+\item Wait at least 1 hour for pumpdown.
+\end{enumerate}
+\subsubsection{Deposition}
+\begin{enumerate}[resume]
+\item Position chips above source using the rotary switch on the right of the lesker.
+\item Select the boat using the power selector at the bottom of the lesker (should make *click* when it locks in to place)
+\item Select the correct film on the oscillator:
+\begin{enumerate}[nolistsep,noitemsep]
+  \item Hit \boxed{pgm}
+  \item Hit \boxed{C} to go up one level to the program select position (above number on left)
+  \item Hit \boxed{X}, where X is the wanted program number
+  \item Hit enter \boxed{E}
+  \item Hit \boxed{pgm} to exit
+  \item Hit \boxed{zero} to zero the thickness
+\end{enumerate}
+\item Ensure that the power supply is dialled down
+\item Turn the source power on
+\item Turn on the filament to read the pressure in real time
+\item Ramp up the power at a rate of \SI{10}{\percent\per\second} until the thickness monitor begins to read \SI{0.1}{\angstrom\per\second}.
+\item Wait at this point for the material to degaz for a few seconds. The pressure will rise suddenly.
+\item Open the source shutter, hit \boxed{zero} on the thickness monitor at the same time. Adjust deposition rate to the correct value. 
+\item Note the pressure Pevap of evaporation
+\item If needed, adjust the power to keep it constant. !Different metals have different response times! 
+\item Close the shutter when the wanted thickness is reached
+\item Bring the power to zero (can be done quickly)
+\item Turn the power off
+\item Repeat for each metal. If possible, wait for vacuum to recover to $< \SI{2d-6}{\milli\bar}$ between each evaporation.
+\end{enumerate}
+\subsubsection{Finishing}
+\begin{enumerate}[resume]
+\item Wait 5 min for the sample and sources to cool down
+\item Turn off the filament
+\item Turn off the turbo and the pump
+\item Wait 5 min
+\item Vent for 3 min
+\item Remove and clean everything
+\item Put boats in contaminated waste (note that gold boats should be reused)
+\item Update logbook
+\end{enumerate}
+
+\subsection{Misc}
+\begin{itemize}
+\item Always check before each step:
+\begin{itemize}[noitemsep,nolistsep]
+  \item power position
+  \item program number
+  \item sample position
+\end{itemize}
+\item never dial power above $50\%$.
+\item deposition rate: never more than \SI{5}{\angstrom\per\second}
+\item pump down for as long as possible. 1 hour is the minimum.
+\item the pressure \SI{2.10d-6}{\torr} is reached in about 3 hours
+\item 4 sticks of Ti can make a layer with a thickness $\approx$ \SI{80}{\angstrom}
+\item 3 sticks of gold (2.5\,mm long) can make a layer with a thickness $\approx$ \SI{500}{\angstrom}
+\item When reusing boats, be aware that boats become brittle after use.
+\end{itemize}
+
+\newpage
+
