@@ -1,5 +1,6 @@
 ## Output file
 recipe.pdf
+revision.tex
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
