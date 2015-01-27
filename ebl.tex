@@ -14,7 +14,7 @@ Coordinate of a pattern inside an existing geometry. The origin of the UVW Local
 - InLens (viewing method): 0 to 20\,kV\\
 - SE2 (viewing method): 20 to 30\,kV\\
 - imaging: internal mode ; writing: external mode\\
-- always \boxed{read} before \boxed{adjust} to coordinates!!\\
+- always \fbox{read} before \fbox{adjust} to coordinates!!\\
 - demo pattern in \textit{users/sylvain/GDSII/demo} \\
 - Good brightness settings for 30um aperture: 50.5 ; Good contrast settings: 29.2\\
 - Good brightness settings for 20um aperture: 49.4 ; Good contrast settings: 32.9\\
@@ -48,7 +48,7 @@ add alignment marks with the EBL in order to do accurate alignment (if necessary
 fines gates and auto alignement marks should be at the middle of a write field.\\
 
 in the Raith software:\\
-- \boxed{create~structure} to create a pattern\\
+- \fbox{create~structure} to create a pattern\\
 - drag the structure name in your mail structure\\
 
 
@@ -102,13 +102,13 @@ clamp your sample in the Universal Sample Holder (prefer left holders).\\
 
 put the USH back in the Raith, \underline{ensure is it clamped properly}\\
 
-click on \boxed{load~sample} to load the sample. This starts a procedure to bring the sample from the load lock to the electrons source, via opening/closing valves\\
+click on \fbox{load~sample} to load the sample. This starts a procedure to bring the sample from the load lock to the electrons source, via opening/closing valves\\
 
 When the loading is finish, move the sample upwards to a position of about 20-21 mm (WD from 8 to 10mm). 20.5\,mm is usually preferred.\\
 
 Open the wafer file "USH 150mm" (or something similar) in File/open waferfiles.\\
 
-Hold \boxed{ctrl} + click on right mouse button to bring the pink square (location of the electrons beam) on the chip (on screen).\\
+Hold \fbox{ctrl} + click on right mouse button to bring the pink square (location of the electrons beam) on the chip (on screen).\\
 Wait for the sample to stop moving.\\
 
 Turn the EHT on \\
@@ -128,19 +128,19 @@ you need to be accurate if you want to use the markers coordinate to find them. 
 
 Set up a low magnification (button on top menu)\\
 
-Using the viewing mode, and open the blanker ($\approx$ shutter) by clicking on \boxed{beam~on/off}\\
+Using the viewing mode, and open the blanker ($\approx$ shutter) by clicking on \fbox{beam~on/off}\\
 
 Zoom and focus on the left right corner. Sketch which feature of the corner you are using as an origin.\\
 
-plot the cross or target (\boxed{green~target?}), and position the corner at the center of the cross\\
+plot the cross or target (\fbox{green~target?}), and position the corner at the center of the cross\\
 
-in the UVW global menu, click on \boxed{adjust} to set the origin at the current point (corner)\\
+in the UVW global menu, click on \fbox{adjust} to set the origin at the current point (corner)\\
 
-\boxed{read} the coordinates for this first point\\
+\fbox{read} the coordinates for this first point\\
 
-to set up a second coordinate point, focus on the right corner and click \boxed{read} on the \textit{label 2} line.\\
+to set up a second coordinate point, focus on the right corner and click \fbox{read} on the \textit{label 2} line.\\
 
-\boxed{adjust} the coordinates for this second point\\
+\fbox{adjust} the coordinates for this second point\\
 
 if the "calculated angle" is in red, click adjust again to rotate the sample\\
 
@@ -173,11 +173,11 @@ measure your current before 3 points alignement cause it create some offset (neg
 
 Move to your 1rst mark using its coordinate. Check you can see it.\\
 
-hit \boxed{beam~current}\\
+hit \fbox{beam~current}\\
 
 choose "faraday cup on holder", check "drive back" is on\\
 
-hit \boxed{measure}\\
+hit \fbox{measure}\\
 
 
 
@@ -200,24 +200,24 @@ Setup point 1:\\
 - do a quick manual alignment\\
 - in `adjust UVW' menu, open the `3 points' tab. \underline{Change to Local} mode.\\
 - write U,V coordinates from your design in the '3 points' tab\\
-- \boxed{read} XY for point 1\\
+- \fbox{read} XY for point 1\\
 - check P1\\
-- \boxed{adjust} to have XY\\
+- \fbox{adjust} to have XY\\
 
 
 Setup points 2 and 3:\\
 - get the coordinates of your markers 2 or 3 by double-clicking on it in your design\\
 - write local U,V coordinates for P2,P3\\
-- \boxed{drive} your beam to P2,P3\\
+- \fbox{drive} your beam to P2,P3\\
 - do a quick manual alignment of the position of your coordinates (center of marker) with the center of the screen\\
-- \boxed{read} XY for point 1,2,3\\
+- \fbox{read} XY for point 1,2,3\\
 - check P1,P2,P3\\
-- \boxed{adjust} to have XY\\
+- \fbox{adjust} to have XY\\
 
 \textbf{Facultative}: if you need to use layer 61 and 63:\\
 
 \textbf{Manual alignment:}\\
-open a \boxed{new~position~list}, drag your geometry into it, access its properties:\\
+open a \fbox{new~position~list}, drag your geometry into it, access its properties:\\
 - Choose the manual mark scan layer (layer 63 of demo pattern)\\
 - the working area is the size of your pattern\\
 %- write the UV coordinates of your 1$^{rst}$ mark \\
@@ -233,7 +233,7 @@ access the properties of your geometry in the position list:\\
 
 IMPORTANT: after alignment, if one of your position list has a red mark:\\
 double-click on it\\
-- on the top of the opening graph, click on the \boxed{blue~square}, and change the threshold to match the intensity difference.\\
+- on the top of the opening graph, click on the \fbox{blue~square}, and change the threshold to match the intensity difference.\\
 - Save\\
 - run the auto alignment with layer 61 again\\
 
@@ -289,9 +289,9 @@ in the main tab, in this order:\\
 
 select the good line under the "manual" menu (already done ??)\\
 
-\boxed{F9} to start the calibration\\
+\fbox{F9} to start the calibration\\
 
-bring the cross at the center of the contamination dot by holding \boxed{ctrl} and clicking on mouse button, do it as many times as required\\
+bring the cross at the center of the contamination dot by holding \fbox{ctrl} and clicking on mouse button, do it as many times as required\\
 
 left screen, open the "Raith protocol" icon, go to tab "WF alignement", actualise to see your results\\
 
@@ -318,15 +318,15 @@ access the properties of your pattern in the position list\\
 In the properties, from the top:\\
 - choose the layers to expose\\
 - check that the working area is the good one (calculate)\\
-- the 'position' line is the center of your first write field, \boxed{calculate} it, and check on design \\
+- the 'position' line is the center of your first write field, \fbox{calculate} it, and check on design \\
 - choose the dose (according to your resist, see training file:`resist theory'). Defaults parameters are 300pAs for lines, 0.1pAs for dots, 100$\mu$As for areas and curves. See next section for more details. \\
-- calculate dwell time simply by clicking on \boxed{calculate}\\
+- calculate dwell time simply by clicking on \fbox{calculate}\\
 
 inside the properties of "position list pattern", click "scan" to expose\\
 
 When finish: EHT off\\
 
-hit \boxed{unload sample} on right screen.\\
+hit \fbox{unload sample} on right screen.\\
 
 When finish:\\
 - close the Raith program\\
