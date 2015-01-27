@@ -1,4 +1,4 @@
-\section{Metal deposition - Thermal Lesker}
+\section{Metal Deposition}
 \subsubsection{Aim}
 Deposit metal on device to cover patterns not covered with resist.
 
@@ -10,18 +10,8 @@ Deposit metal on device to cover patterns not covered with resist.
   \item round shaped wipes
 \end{itemize}
 
-\subsection{Prologue}
-\begin{enumerate}
-\item Take needed materials boxes (located in the "Evaporator Source Metals" drawer), and corresponding cutters.
-\item Prepare the necessary boats for each material. Always manipulate them on wipes on the evaporator.
-\item Take the sample holder and adjust holders such that they can firmly hold the chip
-\item Locate under microscope a scratched corner of the chip. Use this corner to clamp the chip under the chip holder.
-\item Alternatively, you can use a glass part and stick a chip to the glass using a droplet of PMMA. Place
-a drop of PMMA onto the slide and place the chip onto the droplet. Dry for 5 minutes under the fume hood (no need to bake)
-and clamp slide to chip holder. This avoids damaging the chip.
-\item Test that the chip is well clamped by gently shaking the sample holder.
-\end{enumerate}
 \newpage
+
 \subsection{Recipes}
 
 \subsubsection{Ohmics}
@@ -63,25 +53,26 @@ and clamp slide to chip holder. This avoids damaging the chip.
 \textbf{Recipe: }
 \begin{enumerate}[label=\protect\nth{\value*} layer: ,noitemsep,leftmargin=10em]
 \item \SI{100}{\angstrom} of Ti at \SI{1}{\angstrom\per\second}
-\item \SI{1000}{\angstrom} of Au at 3 to \SI{4}{\angstrom\per\second}
+\item \SI{2000}{\angstrom} of Au at 3 to \SI{4}{\angstrom\per\second}
 \end{enumerate}
 
 \newpage
 
-
-\subsection{Procedure}
+\subsection{Thermal Lesker}
+\subsubsection{Preparation}
 \begin{enumerate}
 \item Check that the pump is off
 \item Vent for 3 min
 \item Lift the bell with the remote and remove shield
 \item Place boat on poles using the tools. Boats should fit between the circular washers. Tighten gently, ensuring that
-boats do not twist.
+boats do not twist. Boats should also be manipulated on clean room wipes when not in the evaporator.
 \item Place cut metals into the appropriate boats. Remember to double glove and clean tweezers between each metal
-to prevent cross-contamination.
+to prevent cross-contamination. Sources are found in the "Evaporator Source Metals" drawer and come with corresponding cutters.
 \item Using the lever on the right hand side, place the sample holder above the right boat.
 \item Check the oscillator capacity (press \boxed{xtal} on the infinicon monitor. will return to home screen after a few seconds). Replace if
 oscillator capacity is greater than 25\%.
-\item Insert the sample holder into holder. Ensure that the holder locks firmly into place.
+\item Insert the sample holder into holder. Ensure that the holder locks firmly into place. The chip can either be clamped on a corner of the chip,
+      or alternatively using a drop of PMMA on a circular glass slide.
 \item Place boat separators between each boat. Ensure they do not touch the evaporator poles.
 \item Before closing check:
 \begin{itemize}[nolistsep,noitemsep]
@@ -94,12 +85,14 @@ oscillator capacity is greater than 25\%.
 \item Clean the seal and contact area below bell with IPA
 \item Bring the bell down using the remote. Do not bring it below the indicator.
 \item Turn on the mechanical pump (big toggle switch)
-\item When the pressure $\leq$ \SI{0.2}{\milli\bar}, hit \boxed{start} to turn the turbo on\\
+\item When the pressure is $\leq$ \SI{0.2}{\milli\bar}, hit \boxed{start} to turn the turbo on\\
 \item \underline{when pressure $\leq$ 10$^{-2}$ mbar} (wait 10 minutes after turbo start), the pressure can be read by turning the filament on and then off as soon as the pressure is read.\\
 \item Wait at least 1 hour for pumpdown.
 \end{enumerate}
+
 \subsubsection{Deposition}
 \begin{enumerate}[resume]
+\item Check the pressure in the evaporator using the filament gauge. Record this chip in the evaporator logbook.
 \item Position chips above source using the rotary switch on the right of the lesker.
 \item Select the boat using the power selector at the bottom of the lesker (should make *click* when it locks in to place)
 \item Select the correct film on the oscillator:
@@ -124,19 +117,20 @@ oscillator capacity is greater than 25\%.
 \item Turn the power off
 \item Repeat for each metal. If possible, wait for vacuum to recover to $< \SI{2d-6}{\milli\bar}$ between each evaporation.
 \end{enumerate}
+
 \subsubsection{Finishing}
 \begin{enumerate}[resume]
-\item Wait 5 min for the sample and sources to cool down
-\item Turn off the filament
-\item Turn off the turbo and the pump
-\item Wait 5 min
-\item Vent for 3 min
-\item Remove and clean everything
-\item Put boats in contaminated waste (note that gold boats should be reused)
-\item Update logbook
+\item Wait 5 min for the sample and sources to cool down.
+\item Turn off the filament gauge.
+\item Turn off the turbo and the pump.
+\item Wait 5 min.
+\item Vent for 3 min.
+\item Remove and clean everything.
+\item Put boats in contaminated waste (note that gold boats should be reused).
+\item Update logbook.
 \end{enumerate}
 
-\subsection{Misc}
+\subsubsection{Misc}
 \begin{itemize}
 \item Always check before each step:
 \begin{itemize}[noitemsep,nolistsep]
@@ -155,3 +149,4 @@ oscillator capacity is greater than 25\%.
 
 \newpage
 
+\subsection{E-Beam Evaporator}
