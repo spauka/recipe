@@ -42,23 +42,24 @@ Deposit a thin layer of metal using the HHV Sputterer
 \item Configure the recipe for each metal you want to use:
 \begin{enumerate} [noitemsep,nolistsep] % TODO: Confirm all these items are correct. Filled in from memory....
   \item Hit the \fbox{Recipe} menu item and then hit \fbox{Edit Recipe}.
-  \item Select the recipe you wish to edit and hit \fbox{Edit Recipe}.
+  \item Select the recipe you wish to edit and hit \fbox{Open}.
   \item A list of steps is presented. Select the step you wish to edit and hit \fbox{Edit Step}. For single metals, the last step is normally the deposition.
   \item In the step window, edit the following items:
   \begin{itemize} [noitemsep, nolistsep]
-    \item Check the source shutter is correct.
-    \item Edit the source shutter opening time.
-    \item Edit the conditioning time and power (Note, conditioning time is the final item).
-    \item Edit the deposition power.
+    \item Check that the source power source is selected. This can be RF or DC depending on the material and desired deposition.
+    \item Check workholder rotation settings.
+    \item Edit the source shutter opening time. Note this time is in \textbf{minutes}.
+    \item Edit the conditioning time and power (Note, conditioning time is the final item, powers are the first 3 items).
+    \item Edit the deposition power. This is confusingly above the conditioning time.
   \end{itemize}
   \item Hit save before returning. This gives no feedback so it's worth double checking that the parameters are saved. Close the window.
   \item Hit save on the recipe step. This should give confirmation that the recipe is saved.
 \end{enumerate}
-\item Once the vacuum stage is complete, open the \fbox{Mode} menu and put the tool into \fbox{Auto} mode.
+\item Once the vacuum stage is complete, open the \fbox{Systems} menu and put the tool into \fbox{Auto} mode.
 \item Hit \fbox{Recipe}$\rightarrow$\fbox{Select Recipe} and select the recipe you would like to run.
 \item In the bottom left, hit \fbox{Start} to begin the processing. Ensure that the argon begins to flow at the correct rate (15 sccm).
-      Once deposition begins, ensure that you can see a ring of plasma around the source being sputtered. Open the PSU monitor and record
-      relevant parameters in the sputterer logbook.
+      Once deposition begins, ensure that you can see a ring of plasma around the source being sputtered. Open the power source monitor (\fbox{Devices}$\rightarrow$\fbox{DC PSU} for DC or
+      \fbox{Devices}$\rightarrow$\fbox{RF Generator} for RF)
 \item Once the sputtering is complete, wait for the source to cool down. A rough rule of thumb is to wait half of the sputtering time for this
       to occur.
 \item Hit \fbox{Seal} and \fbox{Vent} to vent the sputterer. Remove samples and return the chamber the vacuum.
@@ -70,6 +71,12 @@ Deposit a thin layer of metal using the HHV Sputterer
       Less reactive metals will need less time, while oxides should be left for longer as they are prone to cracking.
 \item Ensure that you do not touch the surface of the sputtering sources even with gloved hands.
 \item You only need to apply a small amount of thermal grease. Excess grease will prevent proper heat transfer.
+\item If the Vacuum dialog is missing, it can be found in \fbox{Devices}$\rightarrow$\fbox{Vacuum System}.
+\item If the tool has remained under vacuum for an extended period of time, the AIM gauge may end up under range. In this case
+the Alarm will flash in the "Vacuum Systems" window and a message will read "AIM gauge unstruck". This message may be cleared after venting
+the chamber, and is not a cause for concern.
+\item In general the Infinicon gauge is NOT calibrated for the sputterer. In the case that you wish to use it, it will be up to you to calibrate.
+A list of measured thicknesses is available for different powers and times in the logbook.
 \end{itemize}
 \newpage
 
