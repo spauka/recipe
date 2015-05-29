@@ -87,12 +87,12 @@ oscillator capacity is greater than 25\%.
 \item Turn on the mechanical pump (big toggle switch)
 \item When the pressure is $\leq$ \SI{0.2}{\milli\bar}, hit \fbox{start} to turn the turbo on\\
 \item \underline{when pressure $\leq$ 10$^{-2}$ mbar} (wait 10 minutes after turbo start), the pressure can be read by turning the filament on and then off as soon as the pressure is read.\\
-\item Wait at least 1 hour for pumpdown.
+\item Wait at least 1 hour for pump down.
 \end{enumerate}
 
 \subsubsection{Deposition}
 \begin{enumerate}[resume]
-\item Check the pressure in the evaporator using the filament gauge. Record this chip in the evaporator logbook.
+\item Check the pressure in the evaporator using the filament gauge. Record this chip in the evaporator logbook. Ensure this pressure is less than \SI{1d-6}{\torr}.
 \item Position chips above source using the rotary switch on the right of the lesker.
 \item Select the boat using the power selector at the bottom of the lesker (should make *click* when it locks in to place)
 \item Select the correct film on the oscillator:
@@ -126,7 +126,7 @@ oscillator capacity is greater than 25\%.
 \item Wait 5 min.
 \item Vent for 3 min.
 \item Remove and clean everything.
-\item Put boats in contaminated waste (note that gold boats should be reused).
+\item Put boats in contaminated waste. Gold boats should be placed into the lunch box and reused.
 \item Update logbook.
 \end{enumerate}
 
@@ -150,3 +150,72 @@ oscillator capacity is greater than 25\%.
 \newpage
 
 \subsection{E-Beam Evaporator}
+\subsubsection{Preparation}
+\begin{enumerate}
+\item Check that the Operation (CWare), Sigma, and Recipes windows are all open. If they are not, start up the
+      software as described in the startup section.
+\item Check that the correct metals are listed for the crucibles installed in the evaporator. If the
+      necessary metal is missing, call Joanna to change it.
+\item In the Sigma program, check that the crystal has adequate life remaining. Hit \fbox{View}$\rightarrow$\fbox{Sensor Readings}. If the crystal life
+      reads less than $25\%$ then the crystal should be changed.
+\item To vent the chamber, press the \fbox{Start PC Vent} button in the CWare window.
+\item Check that each of the crucibles that you will use contains adequate amounts of metal. In the CWare window, select the metal you want to check and turn
+      the crucible into position manually. On the Genius controller, hit the yellow menu button to get to the "Sample Rotation" window. Increase the value
+      and rotate the crucible until the "Crucible Indexer" flashes "In Posn" green.
+\item Place your samples on the sample holder. Lift the holder and remove it from the lesker. There is a small allen key on the bench for loosening screws.
+\item If the crystal needs to be replaced, undo the thumbscrew on the crystal holder, rotate the shutter out of the way and twist the holder out.
+      Place a new crystal into the holder and replace holder and tighten the thumbscrew. Ensure the shutter opens freely.
+\item Pump the chamber down, press the \fbox{Start PC Pump} button in the CWare window. Apply gentle pressure on the door until the pump process begins. Make a note of the start time in the logbook.
+\item Wait until the pressure is below \SI{5d-6}{\torr}.
+\end{enumerate}
+\subsubsection{Recipe Setup}
+\begin{enumerate}[resume]
+\item Make a note of the position of the metal you wish to program.
+\item First, check the hardware recipe.
+\begin{enumerate}[noitemsep,nolistsep]
+  \item In the \fbox{Recipes} window, select the metal you wish to evaporate from the dropdown menu.
+  \item Check that the crucible position you want is set to "Turn\_On/Open/Opening", and is the last crucible in the list. Reorder and change if not.
+  \item double check that the "Platen Motor" is set to turn on and rotates at 10 rpm, and that the Sigma recipe is set to the correct metal.
+  \item Once done adjusting, press \fbox{Update VB} to save.
+\end{enumerate}
+\item Next, check the sigma recipe.
+\begin{enumerate}
+  \item In the \fbox{SQS-242} recipe, hit \fbox{Edit}$\rightarrow$\fbox{Film Paramters}. Select the metal from the top dropdown
+      menu.
+  \item Set the final thickness value to your desired value. The rate should not be changed.
+  \item Adjust ramp and soak times if needed in the PID paramters.
+  \item Ensure the sensor film is set to the correct metal.
+  \item Close the window to exit. It is not necessary to set the active film, as the hardware recipe will reset it anyway.
+\end{enumerate}
+\end{enumerate}
+\subsubsection{Deposition}
+\begin{enumerate}[resume]
+\item Once the chamber is pumped down ($<$ \SI{5d-6}{\torr}), we can begin deposition. Make a note of the base pressure in the logbook.
+\item In the \fbox{Operation} window, select \fbox{Run Recipe}. Select the correct metal from the list and hit the green box to begin processing.
+\item As the recipe begins, check the following things:
+\begin{enumerate}[noitemsep, nolistsep]
+  \item Correct crucible moves into position.
+  \item Platter begins rotation.
+  \item None of the shutters open. Take special care that the crystal shutter doesn't switch.
+  \item E-beam turns on successfully. Note the interlock system, \fbox{E-Beam Off} turns off, \fbox{E-Beam On} turns on.
+\end{enumerate}
+\item Once the e-beam current begins, switch over to the sigma window to monitor the rates.
+\item Simultaneously, using the Genius controller ensure that the beam is centered on the metal and traces a wide circle. By default the beam amplitude should be set to $40\%$. If for some reason there is a need to abort, press \fbox{Abort Process} in the {\bf SIGMA} window, and NOT in the Operation window.
+\item During the various stages, the following should occur:
+\begin{enumerate}[noitemsep,nolistsep]
+  \item Ramp 1: Use this time to center the beam and adjust the amplitude. At the end of this stage the rate should be \SI{0}{\angstrom\per\second}.
+  \item Soak 1: This stage is used to heat the metal to just before deposition. Make any additional beam adjustments, and take note that the metal may move during this stage. At the end of this stage the rate should be between \SI{0}{\angstrom\per\second} and \SI{0.2}{\angstrom\per\second}.
+  \item Ramp 2: This stage sets the beam to close to the final deposition power. If the beam is not correctly positioned it is best to abort and try again by this point. At the end of this stage the rate should be between \SI{1}{\angstrom\per\second} and the final deposition rate.
+  \item Soak 2: By the end of this stage, the rate should be just below the target deposition rate. Make small adjustments to the power in the SIGMA window if necessary.
+  \item Shutter Delay: The PID controller takes over and tries to stabilize the rate at the target deposition rate. After the rate is stable the shutter will open and the deposition will begin.
+\end{enumerate}
+\item Monitor the beam and rate during the deposition. Ensure that the rate remains stable and keep the beam centered if the metal shifts.
+\item Once the deposition is complete. Make a note of the deposition parameters in the logbook.
+\item Wait a few minutes for the metal to cool before continuing.
+\end{enumerate}
+\subsubsection{Finishing}
+\begin{enumerate}[resume]
+\item To vent the chamber, press the \fbox{Start PC Vent} button in the CWare window.
+\item Remove your samples from the holder.
+\item Start the chamber pumping again. Close the chamber and press the \fbox{Start PC Pump} button in the CWare window.
+\end{enumerate}
