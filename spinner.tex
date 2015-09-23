@@ -1,4 +1,5 @@
 \section{Resist spinning}
+\label{sec:resistspinning}
 
 \subsubsection{Aim}
 Dispense a homogeneous layer of resist on the chip
@@ -19,20 +20,30 @@ The resist stacks for various steps of processing are as follows:
   \begin{itemize} [noitemsep, nolistsep]
     \item PMMA A3
   \end{itemize}
-\item[Optical Gates] \hfill
+\item[Optical Metals] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item AZ6612
+    \item LOR 20B
+  \end{itemize}
+\item[Polyimide Dielectrics] \hfill
   \begin{itemize} [noitemsep, nolistsep]
     \item AZ6612
     \item LOR 20B
   \end{itemize}
 \end{description}
 
-\subsubsection{Needs}
+\subsubsection{Materials}
 \begin{itemize} [noitemsep]
-\item check everything is clean
-\item IPA
+\item acetone, IPA
+\item resist AZ6612, LOR 20B, PMMA A3, HD8820, HD4100
 \item pipette
-\item resist AZ6612, LOR 20B, PMMA A3
 \item timer
+\end{itemize}
+
+\subsection{Equipment}
+\begin{itemize}[noitemsep]
+	\item spinner
+	\item hotplate
 \end{itemize}
 
 \subsubsection{Programming}
@@ -73,6 +84,14 @@ The resist stacks for various steps of processing are as follows:
   \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
   \item Bake for 90 sec at \SI{180}{\celsius}
   \end{enumerate}
+\item {HD8820 or HD4100}
+  \begin{enumerate}
+  \item 500 rpm for 5-10 sec, 500 rpm/sec ramp.
+  \item 9000 rpm for 3 sec, 9000 rpm/sec ramp.
+  \item 6000 rpm for 60 sec, 4000 rpm/sec ramp.
+  \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
+  \item Bake for 60 sec at \SI{95}{\celsius}
+  \end{enumerate}
 \end{description}
 
 \subsubsection{Steps}
@@ -93,18 +112,17 @@ The resist stacks for various steps of processing are as follows:
 \item Always put the pipette back in its bag, wait for the spinning to stop
 \item Bake the chip
 \item Put the chip back in its box
-\item Clean the spinner (!no liquid in vacuum hole!): use wipes with acetone to clean the chuck, protections, bench. Note that
-      if LOR 20B was used, clean with a wipe soaked in NMP prior to the acetone, as LOR 20B will precipitate and crystalize on the spinner.
+\item Clean the spinner (!no liquid in vacuum hole!): use wipes with acetone to clean the chuck, protections, bench. Note that if LOR 20B was used, clean with a wipe soaked in NMP prior to the acetone, as LOR 20B will precipitate and crystalize on the spinner.
 \end{enumerate}
 
-\subsubsection{Misc}
+\subsubsection{Remarks}
 \begin{itemize}
 \item Don't put liquid in the spinner vacuum hole when cleaning.
 \item Resist AZ6612, 12 means \SI{1.2}{\micro\meter}. (Measured depth closer to \SI{800}{\nano\meter})
-\item If you will be spinning LOR 20B turn on the hot plate before you start. It takes about 10 minutes to warm up.
-\item If LOR 20B has been spun, remember to clean using NMP prior to using acetone.
+\item If you will be spinning LOR 20B turn on the hot plate before you do anything else, since it takes around an hour from cold. If you forget, you can drop the temperature on the 180 degree hot plate.
+\item If LOR 20B has been spun, remember to clean the spinner using NMP prior to using acetone.
 \item Note that the vacuum only turns on while the spinner is running. Don't spray before or after the spinner has stopped.
+\item Spin-cleaning before spinning resist is optional, and will not be needed if the chip has come directly from an NMP / IPA clean. If using a multi-layer process, of course do not spin-clean before the second layer.
 \end{itemize}
 
 \newpage
-
