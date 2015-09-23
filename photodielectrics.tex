@@ -1,0 +1,85 @@
+
+\section{Spin-coated Dielectric Layers}
+\label{sec:photodielectrics}
+
+\subsubsection{Aim}
+To apply a spin-coated lithographically-defined dielectric for use with multi-layer metalisation
+
+\subsection{Materials}
+\begin{itemize}[noitemsep]
+	\item chip
+	\item resist, HD8820 or HD4100
+	\item developer, MIF300 (for HD8820) or PA400D (for HD4100)
+	\item rinse, DI water (for HD8820) or PA400R (for HD4100)
+	\item two beakers
+	\item photomask for positive polarity (for HD8820), or negative polarity (for HD4100)
+\end{itemize}
+
+\subsection{Equipment}
+\begin{itemize}[noitemsep]
+	\item spinner
+	\item hotplate
+	\item mask aligner
+	\item fume cupboard
+	\item muffle furnace
+	\item plasma asher (optional)
+\end{itemize}
+
+\subsubsection{Recipe}
+\begin{enumerate}
+	\item spin coat photoresist to cleaned chip surface
+	\begin{itemize}
+		\item 500 rpm (500 rpm ramp) for 5 - 10 seconds
+		\item 9000 rpm (9000 rpm ramp) for 3 seconds
+		\item 6000 rpm (4000 rpm ramp) for 60 seconds
+	\end{itemize}
+	\item bake 60 seconds at 95 degrees
+	\item expose for 50 seconds (HD8820) or 60 seconds (HD4100)
+	\item bake for 60 seconds at 120 degrees
+	\item develop for 80 seconds (HD8820) or 100 seconds (HD4100)
+	\item rinse
+	\item inspect
+	\item optional - plasma ash to remove trace resist before curing
+	\item cure in muffle furnace with nitrogen environment
+	\begin{itemize}
+		\item ramp to 200 degrees in 60 minutes
+		\item hold for 30 minutes
+		\item ramp to 270 degrees (HD8820) or 300 degrees (HD4100) in 30 minutes
+		\item hold for 60 minutes (HD8820) or 120 minutes (HD4100)
+		\item cool
+	\end{itemize}
+\end{enumerate}
+
+
+\subsubsection{Steps}
+\begin{enumerate}
+\item Take working bottle of resist out of freezer and let it come to room temperature. If there is insufficient resist in the working bottle, then refill a small amount from the main bottle. This will take an hour or so to warm up - place it back in the freezer immediately after decanting to extend resist life.
+\item Follow the instructions in section \ref{sec:resistspinning} to apply and spin resist. It is particularly viscous, so you may need to allow extra time to apply the resist.
+\item Pre-bake at 95 degrees for 60 seconds
+\item Expose for 50 (HD8820) or 60 (HD4100) seconds at 10 mWcm$^{-2}$ following the instructions in \ref{sec:photolith}.
+\item Post-bake at 120 degrees for 60 seconds. This post-bake will have some effect on the final ramp slope, with a higher temperature producing steeper walls.
+\item Set up a beaker of the relevant developer (MIF300 for HD8820, P400D for HD4100) and a beaker of the relevant rinse (DI water for HD8820, P400R for HD4100) in a fume cupboard.
+\item Swirl the chip in the developer for 80 seconds (HD8820) or 100 seconds (HD4100) then in the rinse for 30 seconds. Blow dry.
+\item Inspect under a microscope that all the resist has been developed. If not, return to the developer for another 20 seconds or so (then rinse, then dry).
+\item If film is not suitable, remove with NMP. If it is, return the working bottle of resist to the freezer unless it will be used in the next day or so
+\item Optional: remove any residual resist on the surface using a plasma ash, as per section \ref{sec:ash}.
+\item Cure film in the muffle furnace with the following parameters:
+\begin{itemize}
+	\item ramp to 200 degrees in 60 minutes
+	\item hold for 30 minutes
+	\item ramp to 270 degrees (HD8820) or 300 degrees (HD4100) in 30 minutes
+	\item hold for 60 minutes (HD8820) or 120 minutes (HD4100)
+	\item cool
+\end{itemize}
+\end{enumerate}
+
+\subsection{Remarks}
+\begin{enumerate}
+	\item The resist is exceptionally viscous, so it can sometimes be awkward to apply to the chip. If this is a problem, either use a longer application time (at 500 rpm) or apply while the chip is stationary.
+	\item The film thickness is determined by the viscosity of the resist and the spin speed. For a thinner film, you can reduce the viscosity (mix the resist with IPA or a proprietary thinner) or increase the spin speed. A ramp speed of 6000 rpm produces films that are 3 um thick. Note that this is after curing - the film is roughly twice as thick before the curing process.
+	\item The excessive exposure time is due to the thickness of the film, where in this context ``thick'' means the thickness relative to the penetration of i-line light.
+	\item If time is tight, you can try a hotplate with the same temperatures for 10 - 20 minutes, however this is not recommended. The rapid heating results in bubbles in the film, and the oxygen environment contaminates the resist.
+\end{enumerate}
+
+
+\newpage
