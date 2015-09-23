@@ -25,6 +25,10 @@ The resist stacks for various steps of processing are as follows:
     \item AZ6612
     \item LOR 20B
   \end{itemize}
+\item[ALD Layers] \hfill
+  \begin{itemize} [noitemsep, nolistsep]
+    \item nLOF2020/AZ6612
+  \end{itemize}
 \item[Polyimide Dielectrics] \hfill
   \begin{itemize} [noitemsep, nolistsep]
     \item HD8820
@@ -35,7 +39,7 @@ The resist stacks for various steps of processing are as follows:
 \subsubsection{Materials}
 \begin{itemize} [noitemsep]
 \item acetone, IPA
-\item resist AZ6612, LOR 20B, PMMA A3, HD8820, HD4100
+\item resist AZ6612, nLOF2020, LOR 20B, PMMA A3, HD8820, HD4100
 \item pipette
 \item timer
 \end{itemize}
@@ -75,6 +79,14 @@ The resist stacks for various steps of processing are as follows:
   \item 4000 rpm for 20 sec, 4000 rpm/sec ramp.
   \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
   \item Bake for 60 sec at \SI{95}{\celsius}
+  \end{enumerate}
+\item {nLOF2020}
+  \begin{enumerate}
+  \item 500 rpm for 5 sec, 500 rpm,sec ramp.
+  \item 10000 rpm for 20 sec, 4000 rpm/sec ramp.
+  \item 4000 rpm for 20 sec, 4000 rpm/sec ramp.
+  \item (finish) 0 rpm for 0 sec, 2000 rpm/sec ramp.
+  \item Bake for 60 sec at \SI{110}{\celsius}
   \end{enumerate}
 \item {PMMA A3}
   \begin{enumerate}
@@ -123,6 +135,7 @@ The resist stacks for various steps of processing are as follows:
 \item If LOR 20B has been spun, remember to clean the spinner using NMP prior to using acetone.
 \item Note that the vacuum only turns on while the spinner is running. Don't spray before or after the spinner has stopped.
 \item Spin-cleaning before spinning resist is optional, and will not be needed if the chip has come directly from an NMP / IPA clean. If using a multi-layer process, of course do not spin-clean before the second layer.
+\item Don't forget that nLOF also requires a post-bake after exposure, otherwise the developer will remove everything....
 \end{itemize}
 
 \newpage
